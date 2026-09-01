@@ -146,7 +146,9 @@
 
 @layer components {
     .hero__img {
-        max-height: 400px;
+        
+        display: block;
+        max-height: 300px;
         object-fit: cover;
         width: 100%;
       }
