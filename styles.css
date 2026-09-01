@@ -148,7 +148,7 @@
     .hero__img {
         
         display: block;
-        max-height: 300px;
+        max-height: 500px;
         object-fit: cover;
         width: 100%;
       }
