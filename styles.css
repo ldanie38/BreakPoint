@@ -99,7 +99,7 @@
         margin-right: auto;
       }
       
-      /* Add spacing between the right-side links */
+      /* Add spacing between links */
       .nav a:not(:first-child) {
         padding: 0 var(--space-2);
       }
