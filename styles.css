@@ -86,12 +86,24 @@
 /* LAYOUT  */
 
 @layer layout {
-  .nav {
-    display: flex;
-    gap: var(--space-2);
-    padding: var(--space-2);
-    background: var(--color-surface);
-  }
+    .nav {
+        display: flex;
+        align-items: center;
+        padding: var(--space-2);
+        background: var(--color-surface);
+        gap: var(--space-2);
+      }
+      
+      /* Push everything except BreakPoint to the right */
+      .nav a:first-child {
+        margin-right: auto;
+      }
+      
+      /* Add spacing between the right-side links */
+      .nav a:not(:first-child) {
+        padding: 0 var(--space-2);
+      }
+      
 
   .hero {
     position: relative;
