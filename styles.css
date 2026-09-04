@@ -159,6 +159,47 @@
       ====== */
    
    @layer components {
+
+    .hero {
+        position: relative;
+        text-align: center;
+        color: white;
+      }
+      
+      /* Overlay text block */
+
+      .hero__content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(41, 50, 65, 0.6);
+        padding: var(--space-4);
+        border-radius: var(--radius-card);
+        max-width: 80%; 
+        width: 900px;  
+        line-height: 1.6;
+      }
+
+      .hero__content .button {
+        margin-top: var(--space-2); 
+      }
+      
+
+ 
+      
+      @media (max-width: 768px) {
+        .hero__content {
+          width: 90%;
+          padding: var(--space-2);
+        }
+      }
+      
+      .hero__content h1,
+      .hero__content p {
+        color: var(--color-surface);
+      }
+      
    
      /* HERO IMAGE */
      .hero__img {
