@@ -13,7 +13,14 @@
        --color-accent: #EE6C4D;  /* coral accent */
        --color-surface: #E0FBFC; /* light surf white */
        --color-text: #293241; /* deep navy text */
-       --color-body:  #F0EBD8;  
+       --color-body: linear-gradient(
+        to bottom right,
+        #e3f2fd,
+        #bbdefb,
+        #90caf9,
+        #bfdbf7
+        
+      );  
       
    
        /* Typography */
@@ -65,9 +72,9 @@
         color: var(--color-text);
         background: var(--color-body);
         backdrop-filter: blur(6px); 
-        
-       /* backdrop-filter: blur(3px); */
-        
+        display: flexbox;
+        justify-content: center;
+        align-items: center;
         line-height: 1.5;
       }
    
@@ -103,8 +110,8 @@
       ========= */
    @layer layout {
      /* NAVIGATION */
-     nav {
-       position: absolute;
+     .nav {
+       position: sticky;
        top: 0;
        left: 0;
        width: 100%;
@@ -114,7 +121,13 @@
        padding: var(--space-2) var(--space-4);
        background: rgba(41, 50, 65, 0.4);
        backdrop-filter: blur(4px);
+       left: 10%;
      }
+
+  
+      
+
+
    
      .nav a:first-child {
        margin-right: auto;
