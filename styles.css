@@ -323,10 +323,10 @@
    }
 
    /* ==========
-   LAYOUT — SAFE BREAKPOINTS
+   LAYOUT 
    ========= */
 
-/* CARD GRID — keep your 2-col and 3-col layout, but prevent overflow */
+/* CARD GRID — keep 2-col and 3-col, but prevent overflow */
 @media (min-width: 600px) {
     .card-grid {
       grid-template-columns: repeat(2, 1fr);
