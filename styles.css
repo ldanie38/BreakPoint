@@ -1,84 +1,324 @@
-/* ==========
-   LAYOUT
-   ========= */
-   @layer layout {
+/* =========
+   LAYERS
+   =========*/
+   @layer reset, base, layout, components, utilities, overrides;
 
-    /* NAVIGATION */
-    nav {
-      position: sticky;
-      top: 0;
-      width: 100%;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      padding: var(--space-2) var(--space-4);
-      background: rgba(41, 50, 65, 0.4);
-      backdrop-filter: blur(4px);
-    }
+   /* ==========
+      TOKENS
+      ========= */
+   @layer base {
+     :root {
+       /* Colors */
+       --color-primary: #3D5A80; /* ocean blue */
+       --color-accent: #EE6C4D;  /* coral accent */
+       --color-surface: #E0FBFC; /* light surf white */
+       --color-text: #293241; /* deep navy text */
+       --color-body:  #F0EBD8;  
+      
+   
+       /* Typography */
+       --font-heading: "Josefin Sans", sans-serif;
+       --font-body: "Biryani", sans-serif;
+       --font-accent: "Alegreya Sans SC", sans-serif;
+   
+       /* Spacing */
+       --space-1: 0.5rem;
+       --space-2: 1rem;
+       --space-4: 2rem;
+   
+       /* Shape */
+       --radius-card: 8px;
+       --radius-button: 8px;
+   
+       /* Focus */
+       --focus-outline: 2px solid var(--color-accent);
+     }
+   }
+   
+   /* ============
+      RESET
+      ========= */
+   @layer reset {
+     *, *::before, *::after {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+     }
+   }
+   
+   /* ==========
+      BASE
+      ========= */
+   @layer base {
+
+
   
-    .nav a:first-child {
-      margin-inline-end: auto;
-    }
-  
-    .nav a:not(:first-child) {
-      padding-inline: var(--space-2);
-    }
-  
-    /* HERO */
-    .hero {
-      position: relative;
-      text-align: center;
-      padding-block: var(--space-4);
-    }
-  
-    /* INTRO */
-    .intro {
-      text-align: center;
-      padding-block: var(--space-4);
-    }
-  
-    /* CARD GRID */
-    .card-grid {
-      display: grid;
-      gap: var(--space-4);
-      padding: var(--space-4);
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
-  
-    /* Breakpoint: nav links start wrapping */
-    @media (max-width: 650px) {
-      nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        padding-block: var(--space-2);
-      }
-  
-      .nav a {
-        padding-block: var(--space-1);
-      }
-    }
-  
-    /* Breakpoint: hero overlay gets too wide */
-    @media (max-width: 768px) {
-      .hero__content {
-        width: 90%;
-        padding: var(--space-2);
-        margin-block-start: var(--space-4);
-      }
-    }
-  
-    /* Breakpoint: hero image height becomes too tall on mobile */
-    @media (max-width: 480px) {
-      .hero__img {
-        height: 60vh;
-      }
-    }
-  
-    /* FOOTER */
-    .footer {
-      text-align: center;
-      padding-block: var(--space-4);
-      background: var(--color-surface);
-    }
+  /* Optional: remove body default margin */
+  body {
+    margin: 0;
   }
   
+
+     body {
+        margin: 0;
+        font-family: var(--font-body);
+        color: var(--color-text);
+        background: var(--color-body);
+        backdrop-filter: blur(6px); 
+        
+       /* backdrop-filter: blur(3px); */
+        
+        line-height: 1.5;
+      }
+   
+     img {
+       max-width: 100%;
+       display: block;
+     }
+   
+     a {
+       text-decoration: none;
+       color: var(--color-primary);
+     }
+   
+     a:hover {
+       color: var(--color-accent);
+     }
+   
+     a:focus-visible {
+       outline: var(--focus-outline);
+     }
+   
+     h1, h2 {
+       font-family: var(--font-heading);
+     }
+   
+     h3 {
+       font-family: var(--font-accent);
+     }
+   }
+   
+   /* ==========
+      LAYOUT
+      ========= */
+   @layer layout {
+     /* NAVIGATION */
+     nav {
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       z-index: 100;
+       display: flex;
+       align-items: center;
+       padding: var(--space-2) var(--space-4);
+       background: rgba(41, 50, 65, 0.4);
+       backdrop-filter: blur(4px);
+     }
+   
+     .nav a:first-child {
+       margin-right: auto;
+     }
+   
+     .nav a:not(:first-child) {
+       padding: 0 var(--space-2);
+     }
+   
+     /* HERO */
+     .hero {
+       position: relative;
+       text-align: center;
+       padding: var(--space-4);
+     }
+   
+     .intro {
+       text-align: center;
+       padding: var(--space-4);
+     }
+   
+     /* GRID */
+     .card-grid {
+       display: grid;
+       gap: var(--space-4);
+       padding: var(--space-4);
+     }
+   
+     @media (min-width: 600px) {
+       .card-grid {
+         grid-template-columns: repeat(2, 1fr);
+       }
+     }
+   
+     @media (min-width: 900px) {
+       .card-grid {
+         grid-template-columns: repeat(3, 1fr);
+       }
+     }
+   
+     /* FOOTER */
+     .footer {
+       text-align: center;
+       padding: var(--space-4);
+       background: var(--color-surface);
+     }
+   }
+   
+   /* =========================
+      COMPONENTS
+      ========================= */
+   @layer components {
+     /* HERO */
+
+     .hero {
+        position: relative;
+        text-align: center;
+        color: white;
+        margin: 0; 
+        padding: 0;
+      }
+   
+     /* Overlay text block */
+     .hero__content {
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       background: rgba(41, 50, 65, 0.6);
+       padding: var(--space-4);
+       border-radius: var(--radius-card);
+       max-width: 80%;
+       width: 900px;
+       line-height: 1.6;
+       margin-top: 4rem; /* keeps text below nav */
+     }
+   
+     .hero__content .button {
+       margin-top: var(--space-2);
+     }
+   
+     @media (max-width: 768px) {
+       .hero__content {
+         width: 90%;
+         padding: var(--space-2);
+       }
+     }
+   
+     .hero__content h1,
+     .hero__content p {
+       color: var(--color-surface);
+     }
+   
+     /* HERO IMAGE */
+           
+     .hero__img {
+        display: block;
+        width: 100vw; 
+        height: 80vh; /* balanced height */
+        object-fit: cover;
+        object-position: center;
+        margin: 0;
+      }
+   
+     /* BUTTON */
+     .button {
+       display: inline-block;
+       padding: var(--space-1) var(--space-2);
+       background: var(--color-accent);
+       color: white;
+       border-radius: var(--radius-button);
+       font-family: var(--font-heading);
+       transition: background 0.2s ease, transform 0.2s ease;
+     }
+   
+     .button:hover {
+       background: var(--color-primary);
+       transform: translateY(-2px);
+     }
+   
+     .button:focus-visible {
+       outline: var(--focus-outline);
+     }
+   
+     /* CARD */
+     .card {
+       background: var(--color-surface);
+       padding: var(--space-2);
+       border-radius: var(--radius-card);
+       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+     }
+   
+     /* NAV LINKS */
+     .nav a {
+       color: var(--color-surface);
+       font-weight: 600;
+       text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+       transition: color 0.3s ease;
+     }
+   
+     .nav a:hover {
+       color: var(--color-accent);
+     }
+   
+     .nav a[aria-current="page"] {
+       color: var(--color-accent);
+     }
+   
+     /* ERROR STATE */
+     .is-error {
+       border: 2px solid red;
+       background: #ffe6e6;
+       padding: var(--space-1);
+       border-radius: var(--radius-card);
+     }
+
+
+   }
+   
+   /* ============
+      UTILITIES
+      ========= */
+   @layer utilities {
+     .u-flex-center {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+     }
+   
+     .u-mb-2 {
+       margin-bottom: var(--space-2);
+     }
+   
+     .u-text-sm {
+       font-size: 0.875rem;
+     }
+   }
+   
+   /* ====================
+      PRINT OVERRIDES
+      ==================== */
+   @layer overrides {
+     @media print {
+       nav,
+       .hero,
+       .button {
+         display: none !important;
+       }
+   
+       body {
+         background: white;
+         color: black;
+         font-size: 12pt;
+       }
+   
+       .card {
+         box-shadow: none;
+         border: 1px solid black;
+       }
+   
+       a::after {
+         content: " (" attr(href) ")";
+         font-size: 10pt;
+       }
+     }
+   }
+   
