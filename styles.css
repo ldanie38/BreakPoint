@@ -339,7 +339,7 @@
     }
   }
   
-  /* HERO CONTENT — only soften width on small screens */
+  /* HERO CONTENT —  */
   @media (max-width: 768px) {
     .hero__content {
       max-width: 90%;
@@ -347,14 +347,14 @@
     }
   }
   
-  /* HERO IMAGE — prevent mobile overflow without changing your design */
+  /* HERO IMAGE — */
   @media (max-width: 480px) {
     .hero__img {
-      height: 70vh; /* still tall, still dramatic */
+      height: 70vh;
     }
   }
   
-  /* NAV — keep your absolute nav, just reduce padding on small screens */
+  /* NAV — */
   @media (max-width: 650px) {
     nav {
       padding: var(--space-1) var(--space-2);
