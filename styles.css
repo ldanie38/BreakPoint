@@ -321,4 +321,48 @@
        }
      }
    }
+
+   /* ==========
+   LAYOUT — SAFE BREAKPOINTS
+   ========= */
+
+/* CARD GRID — keep your 2-col and 3-col layout, but prevent overflow */
+@media (min-width: 600px) {
+    .card-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 900px) {
+    .card-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* HERO CONTENT — only soften width on small screens */
+  @media (max-width: 768px) {
+    .hero__content {
+      max-width: 90%;
+      padding: var(--space-2);
+    }
+  }
+  
+  /* HERO IMAGE — prevent mobile overflow without changing your design */
+  @media (max-width: 480px) {
+    .hero__img {
+      height: 70vh; /* still tall, still dramatic */
+    }
+  }
+  
+  /* NAV — keep your absolute nav, just reduce padding on small screens */
+  @media (max-width: 650px) {
+    nav {
+      padding: var(--space-1) var(--space-2);
+    }
+  
+    .nav a:not(:first-child) {
+      padding: 0 var(--space-1);
+    }
+  }
+  
    
