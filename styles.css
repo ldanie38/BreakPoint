@@ -8,36 +8,29 @@
       ========= */
    @layer base {
      :root {
-       /* Colors */
-       --color-primary: #3D5A80; /* ocean blue */
-       --color-accent: #EE6C4D;  /* coral accent */
-       --color-surface: #E0FBFC; /* light surf white */
-       --color-text: #293241; /* deep navy text */
+       --color-primary: #3D5A80;
+       --color-accent: #EE6C4D;
+       --color-surface: #E0FBFC;
+       --color-text: #293241;
        --color-body: linear-gradient(
-        to bottom right,
-        #e3f2fd,
-        #bbdefb,
-        #90caf9,
-        #bfdbf7
-        
-      );  
-      
+         to bottom right,
+         #e3f2fd,
+         #bbdefb,
+         #90caf9,
+         #bfdbf7
+       );
    
-       /* Typography */
        --font-heading: "Josefin Sans", sans-serif;
        --font-body: "Biryani", sans-serif;
        --font-accent: "Alegreya Sans SC", sans-serif;
    
-       /* Spacing */
        --space-1: 0.5rem;
        --space-2: 1rem;
        --space-4: 2rem;
    
-       /* Shape */
        --radius-card: 8px;
        --radius-button: 8px;
    
-       /* Focus */
        --focus-outline: 2px solid var(--color-accent);
      }
    }
@@ -57,26 +50,15 @@
       BASE
       ========= */
    @layer base {
-
-
-  
-  /* Optional: remove body default margin */
-  body {
-    margin: 0;
-  }
-  
-
+   
      body {
-        margin: 0;
-        font-family: var(--font-body);
-        color: var(--color-text);
-        background: var(--color-body);
-        backdrop-filter: blur(6px); 
-        display: flexbox;
-        justify-content: center;
-        align-items: center;
-        line-height: 1.5;
-      }
+       margin: 0;
+       font-family: var(--font-body);
+       color: var(--color-text);
+       background: var(--color-body);
+       backdrop-filter: blur(6px);
+       line-height: 1.5;
+     }
    
      img {
        max-width: 100%;
@@ -109,11 +91,10 @@
       LAYOUT
       ========= */
    @layer layout {
-     /* NAVIGATION */
+   
      .nav {
        position: sticky;
        top: 0;
-       left: 0;
        width: 100%;
        z-index: 100;
        display: flex;
@@ -121,13 +102,7 @@
        padding: var(--space-2) var(--space-4);
        background: rgba(41, 50, 65, 0.4);
        backdrop-filter: blur(4px);
-       left: 10%;
      }
-
-  
-      
-
-
    
      .nav a:first-child {
        margin-right: auto;
@@ -137,7 +112,6 @@
        padding: 0 var(--space-2);
      }
    
-     /* HERO */
      .hero {
        position: relative;
        text-align: center;
@@ -149,7 +123,6 @@
        padding: var(--space-4);
      }
    
-     /* GRID */
      .card-grid {
        display: grid;
        gap: var(--space-4);
@@ -168,7 +141,6 @@
        }
      }
    
-     /* FOOTER */
      .footer {
        text-align: center;
        padding: var(--space-4);
@@ -180,17 +152,15 @@
       COMPONENTS
       ========================= */
    @layer components {
-     /* HERO */
-
-     .hero {
-        position: relative;
-        text-align: center;
-        color: white;
-        margin: 0; 
-        padding: 0;
-      }
    
-     /* Overlay text block */
+     .hero {
+       position: relative;
+       text-align: center;
+       color: white;
+       margin: 0;
+       padding: 0;
+     }
+   
      .hero__content {
        position: absolute;
        top: 50%;
@@ -202,11 +172,7 @@
        max-width: 80%;
        width: 900px;
        line-height: 1.6;
-       margin-top: 4rem; /* keeps text below nav */
-     }
-   
-     .hero__content .button {
-       margin-top: var(--space-2);
+       margin-top: 4rem;
      }
    
      @media (max-width: 768px) {
@@ -216,23 +182,13 @@
        }
      }
    
-     .hero__content h1,
-     .hero__content p {
-       color: var(--color-surface);
+     .hero__img {
+       width: 100vw;
+       height: 80vh;
+       object-fit: cover;
+       object-position: center;
      }
    
-     /* HERO IMAGE */
-           
-     .hero__img {
-        display: block;
-        width: 100vw; 
-        height: 80vh; /* balanced height */
-        object-fit: cover;
-        object-position: center;
-        margin: 0;
-      }
-   
-     /* BUTTON */
      .button {
        display: inline-block;
        padding: var(--space-1) var(--space-2);
@@ -248,43 +204,12 @@
        transform: translateY(-2px);
      }
    
-     .button:focus-visible {
-       outline: var(--focus-outline);
-     }
-   
-     /* CARD */
      .card {
        background: var(--color-surface);
        padding: var(--space-2);
        border-radius: var(--radius-card);
        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
      }
-   
-     /* NAV LINKS */
-     .nav a {
-       color: var(--color-surface);
-       font-weight: 600;
-       text-shadow: 0 1px 3px rgba(0,0,0,0.4);
-       transition: color 0.3s ease;
-     }
-   
-     .nav a:hover {
-       color: var(--color-accent);
-     }
-   
-     .nav a[aria-current="page"] {
-       color: var(--color-accent);
-     }
-   
-     /* ERROR STATE */
-     .is-error {
-       border: 2px solid red;
-       background: #ffe6e6;
-       padding: var(--space-1);
-       border-radius: var(--radius-card);
-     }
-
-
    }
    
    /* ============
@@ -334,48 +259,42 @@
        }
      }
    }
-
-   /* ==========
-   LAYOUT 
-   ========= */
-
-/* CARD GRID — keep 2-col and 3-col, but prevent overflow */
-@media (min-width: 600px) {
-    .card-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (min-width: 900px) {
-    .card-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  
-  /* HERO CONTENT —  */
-  @media (max-width: 768px) {
-    .hero__content {
-      max-width: 90%;
-      padding: var(--space-2);
-    }
-  }
-  
-  /* HERO IMAGE — */
-  @media (max-width: 480px) {
-    .hero__img {
-      height: 70vh;
-    }
-  }
-  
-  /* NAV — */
-  @media (max-width: 650px) {
-    nav {
-      padding: var(--space-1) var(--space-2);
-    }
-  
-    .nav a:not(:first-child) {
-      padding: 0 var(--space-1);
-    }
-  }
-  
    
+   /* =============================
+      CONTAINER QUERY 
+      ============================= */
+   
+   /* each card is a container */
+
+
+
+   .card-grid {
+    container-type: inline-size;
+    container-name: surfcard;
+  }
+  
+  /* Default: horizontal layout for small cards */
+  .card {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: var(--space-2);
+  }
+  
+  
+  @container surfcard (min-width: 250px) {
+    .card {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+  
+    .card h3 {
+      font-size: 1.4rem;
+    }
+  
+    .card p {
+      font-size: 1rem;
+    }
+  }
+  
