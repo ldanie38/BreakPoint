@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Biryani:wght@300;400;600&family=Alegreya+Sans+SC:wght@300;400;700&display=swap" rel="stylesheet">
   <title>Break — Home</title>
   <link rel="stylesheet" href="styles.css">
@@ -11,20 +11,41 @@
 
 <body>
 
-    <button class="nav__toggle" aria-expanded="false" aria-label="Menu">
+  <!-- ===========
+       NAVIGATION + HAMBURGER
+       -->
+  <nav class="nav">
+
+
+    <a href="index.html" aria-current="page">
+      <h1>BreakPoint</h1>
+    </a>
+
+    <!-- Checkbox
+         <input type="checkbox" id="menu-toggle" class="nav__checkbox">
+
+     <label for="menu-toggle" class="nav__toggle">
         <span class="nav__icon"></span>
-      </button>
-      
-      <ul class="nav__links">
-        <li><a href="#">Destinations</a></li>
-        <li><a href="#">Spot Comparison</a></li>
-        <li><a href="#">Forecast</a></li>
-        <li><a href="#">Glossary</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
-      
+      </label>
+    --> 
+
+
+   
+    <ul class="nav__links">
+      <li><a href="#">Destinations</a></li>
+      <li><a href="#">Spot Comparison</a></li>
+      <li><a href="#">Forecast</a></li>
+      <li><a href="#">Glossary</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+
+  </nav>
+
+  <!-- ============================
+       HERO SECTION
+       ============================ -->
   <header class="hero">
-    <img src="assets/hero.jpg" alt="Surfers in te water" class="hero__img">
+    <img src="assets/hero.jpg" alt="Surfers in the water" class="hero__img">
 
     <div class="hero__content">
       <h1>Find Your Surf Spot</h1>
@@ -33,32 +54,40 @@
     </div>
   </header>
 
+  <!-- ============================
+       INTRO SECTION
+       ============================ -->
   <section class="intro">
     <h2>Today's Featured Spots</h2>
     <p>Explore surf conditions at popular beginner beaches.</p>
   </section>
 
-  <section class="card-grid " >
+  <!-- ============================
+       CARD GRID
+       ============================ -->
+  <section class="card-grid">
     <article class="card">
       <h3>Ditch Plains</h3>
       <p>Fun waves and wide sandy shoreline.</p>
       <a class="button" href="#">Learn More</a>
     </article>
-  
+
     <article class="card">
       <h3>Lido Beach</h3>
       <p>Calm conditions perfect for new surfers.</p>
       <a class="button" href="#">Learn More</a>
     </article>
-  
+
     <article class="card">
       <h3>Rockaway Beach</h3>
       <p>Consistent breaks and friendly surf community.</p>
       <a class="button" href="#">Learn More</a>
     </article>
   </section>
-  
 
+  <!-- ============================
+       FOOTER
+       ============================ -->
   <footer class="footer">
     <p>© 2026 BreakPoint</p>
   </footer>
