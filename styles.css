@@ -58,6 +58,14 @@
        backdrop-filter: blur(6px);
        line-height: 1.5;
      }
+
+     nav h1{
+        color: var(--color-accent);
+     }
+     nav h1:hover{
+        color: var(--color-surface);
+
+     }
    
      img {
        max-width: 100%;
@@ -66,7 +74,7 @@
    
      a {
        text-decoration: none;
-       color: var(--color-primary);
+       color: var(--color-surface);
      }
    
      a:hover {
@@ -79,6 +87,7 @@
    
      h1, h2 {
        font-family: var(--font-heading);
+
      }
    
      h3 {

@@ -49,3 +49,63 @@ AI assistance was used to help  confirm layer order, and generate boilerplate st
 All CSS was written and tested by me.
 
 
+
+# Capstone Responsive Layout System
+
+This project extends my Module 2 CSS architecture into a production‑ready responsive layout system. I kept the layered structure (`reset`, `base`, `layout`, `components`, `utilities`, `overrides`) and added intrinsic grid layouts, container queries, preference queries, and content‑driven breakpoints. The goal was to build a layout that adapts to real content instead of device labels and stays readable at all sizes.
+
+---
+
+## Layout Architecture
+
+### Layered CSS
+I continued using the Module 2 architecture:
+- **reset** – normalize spacing and box‑sizing  
+- **base** – typography, colors, tokens  
+- **layout** – page‑level wrappers and spacing  
+- **components** – hero, cards, buttons  
+- **utilities** – small helpers  
+- **overrides** – print styles  
+
+This keeps the stylesheet organized and predictable.
+
+### Logical Properties
+All spacing uses logical properties like:
+- `padding-block`
+- `padding-inline`
+- `margin-inline-start`
+- `inline-size`
+
+This makes the layout more flexible and future‑proof.
+
+---
+
+## Responsive Foundation
+
+The layout is fully fluid. I avoided fixed widths and used:
+- `max-width` constraints  
+- percentage sizing  
+- flexible grid columns  
+- intrinsic sizing (`auto`, `minmax()`)  
+
+The nav, hero, intro, card grid, and footer all adapt without device assumptions.
+
+---
+
+## Grid Layouts
+
+### Card Grid
+The card grid uses intrinsic sizing and content‑driven breakpoints:
+- 1 column by default  
+- 2 columns at ~600px  
+- 3 columns at ~900px  
+
+These breakpoints were chosen based on when the content actually needed more space.
+
+### Card Internal Grid
+Each card uses:
+```css
+grid-template-columns: 1fr auto;
+
+
+
