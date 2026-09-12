@@ -108,4 +108,11 @@ Each card uses:
 grid-template-columns: 1fr auto;
 
 
+AI Disclosure 
+
+I used AI assistance to help refine parts of my CSS architecture, especially around container queries, intrinsic grid sizing, and organizing my documentation. AI also helped me debug my navigation  
+
+I verified all layout behavior myself in Chrome and Firefox at narrow, medium, wide, and 200% zoom. I tested keyboard focus, reduced‑motion behavior, and fallback behavior without container queries. I adjusted spacing, breakpoints, and component behavior based on real browser testing. All final decisions, code changes, and testing were done by me. 
+
+
 
