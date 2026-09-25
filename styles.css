@@ -110,6 +110,51 @@
     backdrop-filter: blur(4px);
   }
 
+  .nav__links {
+  list-style: none;   
+  margin: 0;
+  padding: 0;
+  display: flex;        
+  gap: var(--space-2);   /* spacing between links */
+}
+
+.nav__links a {
+  color: var(--color-surface);
+  text-decoration: none;
+  font-family: var(--font-heading);
+}
+
+.nav__links a:hover{
+  color : var(--color-accent);
+}
+
+@media (max-width: 400px) {
+  .nav__links {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .nav h1 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav__links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+}
+
+
+
+
   .nav a:first-child {
     margin-right: auto;
   }
