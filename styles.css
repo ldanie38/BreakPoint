@@ -60,6 +60,12 @@
     backdrop-filter: blur(6px);
     line-height: 1.5;
   }
+  .site-title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--color-accent);
+}
+
 
   nav h1 {
     color: var(--color-accent);
@@ -321,6 +327,9 @@
     cursor: pointer;
   }
 
+
+
+
 }
 
 /* ============
@@ -432,12 +441,12 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding-bottom: 35%; 
-  height: 0;
-  overflow: hidden;
+  aspect-ratio: 16 / 9;  
+  overflow: visible;      
   border-radius: var(--radius-card);
   box-shadow: 0 2px 6px rgba(0,0,0,0.25);
 }
+
 
 /* Keeps iframe centered  */
 .video-wrapper iframe {
