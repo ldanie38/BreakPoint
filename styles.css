@@ -12,6 +12,7 @@
     --color-accent: #EE6C4D;
     --color-surface: #E0FBFC;
     --color-text: #293241;
+    --color-form:  #f7f7f7;
     --color-body: linear-gradient(
       to bottom right,
       #e3f2fd,
@@ -23,6 +24,7 @@
     --font-heading: "Josefin Sans", sans-serif;
     --font-body: "Biryani", sans-serif;
     --font-accent: "Alegreya Sans SC", sans-serif;
+    --font-nav-a: 1.2rem;
 
     --space-1: 0.5rem;
     --space-2: 1rem;
@@ -115,13 +117,14 @@
   margin: 0;
   padding: 0;
   display: flex;        
-  gap: var(--space-2);   /* spacing between links */
+  gap: var(--space-2);  
 }
 
 .nav__links a {
   color: var(--color-surface);
   text-decoration: none;
   font-family: var(--font-heading);
+  font-size: var(--font-nav-a);
 }
 
 .nav__links a:hover{
@@ -261,6 +264,63 @@
     border-radius: var(--radius-card);
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
+
+
+/*--- newsletter---*/
+  .newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 48px 24px;
+    background:var(--color-form);
+    margin-top: 48px;
+    border-top: 1px solid #ddd;
+  }
+
+  .newsletter h2 {
+    margin-bottom: 12px;
+  }
+
+  .newsletter p {
+    max-width: 600px;
+    margin-bottom: 24px;
+  }
+
+  .newsletter-form {
+    width: 100%;
+    max-width: 400px; /* limits input width */
+  }
+
+  .newsletter-form .field {
+    margin-bottom: 20px;
+    text-align: left; /* keeps labels aligned with inputs */
+  }
+
+  .newsletter-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+
+  .newsletter-form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #999;
+    border-radius: 4px;
+  }
+
+  .newsletter-form button {
+    padding: 12px 20px;
+    background: #8c1d40;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
 }
 
 /* ============
