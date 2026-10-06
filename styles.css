@@ -15,6 +15,7 @@
     --color-form:  #f7f7f7;
     --color-body: #f8f9fa;
     --nav-a-color:#f8f9fa;
+    --under-line:#caf0f8;
 
     --font-heading: "Josefin Sans", sans-serif;
     --font-body: "Biryani", sans-serif;
@@ -63,6 +64,12 @@
 .site-title:hover {
   color: var(--nav-a-color);
 }
+
+.logo:hover {
+  color: var(--under-line);
+}
+  
+
 
 
 
@@ -140,7 +147,7 @@
   bottom: -3px;
   width: 100%;
   height: 2px;
-  background: var(--color-primary);;
+  background: var(--under-line);;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform .25s ease;
