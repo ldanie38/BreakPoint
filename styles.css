@@ -578,9 +578,9 @@
 /* mobile nav alignment */
 @media (max-width: 600px) {
   .nav {
-    flex-direction: row;              /* keep logo + hamburger side by side */
-    justify-content: space-between;   /* logo left, hamburger right */
-    align-items: center;              /* vertical center */
+    flex-direction: row;              
+    justify-content: space-between;   
+    align-items: center;              
     flex-wrap: nowrap;
     position: relative;
   }
