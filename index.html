@@ -134,18 +134,20 @@
     <h2>Join Our Surf Newsletter</h2>
     <p>Get beginner-friendly surf forecasts, safety tips, and spot updates. Required fields are marked with an asterisk.</p>
 
-    <form class="newsletter-form">
+    <form class="newsletter-form" aria-describedby="newsletter-desc">
       <div class="field">
         <label for="newsletter-name">Name *</label>
-        <input id="newsletter-name" name="newsletter-name" type="text" required aria-required="true">
+        <input id="newsletter-name" name="newsletter-name" type="text" autocomplete="name" required aria-required="true">
       </div>
 
       <div class="field">
         <label for="newsletter-email">Email *</label>
-        <input id="newsletter-email" name="newsletter-email" type="email" required aria-required="true">
+        <input id="newsletter-email" name="newsletter-email" type="email" autocomplete="email" required aria-required="true">
       </div>
 
       <button type="submit" class="button">Subscribe</button>
+        <!-- Screen-reader friendly status messages -->
+  <div role="status" aria-live="polite" class="form-status"></div>
     </form>
   </section>
 
