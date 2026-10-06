@@ -248,6 +248,13 @@
     object-position: center;
   }
 
+  .logo_svg {
+  display: block;
+  width: clamp(50px, 7vw, 80px); 
+  height: auto;
+}
+
+
   .button {
     display: inline-block;
     padding: var(--space-1) var(--space-2);
