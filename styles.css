@@ -156,29 +156,66 @@
     transform: scaleX(1);
   }
 
-  @media (max-width: 400px) {
-    .nav__links {
-      flex-direction: column;
-      gap: 0.25rem;
-    }
 
-    .nav h1 {
-      font-size: 1.4rem;
-    }
-  }
 
   @media (max-width: 600px) {
-    .nav__links {
-      flex-direction: column;
-      gap: 0.5rem;
-    }
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 
-    .nav {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 1rem;
-    }
+    /* Keep logo and hamburger in one row */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 0.75rem 1rem;
   }
+
+  .nav__brand {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+  }
+
+  .nav-toggle-label {
+    position: relative;
+    z-index: 1002;
+    margin-left: auto;
+  }
+
+  .nav__links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    width: 210px;
+    margin: 0;
+    padding: 0.75rem 0;
+
+    background: rgba(41, 50, 65, 0.98);
+    border-radius: 0 0 0 8px;
+    z-index: 1001;
+  }
+
+  .nav__links li {
+    width: 100%;
+    margin: 0;
+  }
+
+  .nav__links a {
+    display: block;
+    width: 100%;
+    padding: 0.65rem 1rem;
+    text-align: left;
+  }
+}
 
   .nav a:first-child {
     margin-right: auto;
@@ -204,6 +241,36 @@
     gap: var(--space-4);
     padding: var(--space-4);
   }
+
+
+@media (max-width: 768px) {
+  .nav__links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+
+    width: 210px;
+    margin: 0;
+    padding: 0.75rem 0;
+
+    background: rgba(41, 50, 65, 0.98);
+    border-radius: 0 0 0 8px;
+    z-index: 1001;
+  }
+
+  .nav__links li {
+    width: 100%;
+    margin: 0;
+  }
+
+  .nav__links a {
+    display: block;
+    width: 100%;
+    padding: 0.55rem 1rem;
+    line-height: 1.3;
+    text-align: left;
+  }
+}
 
   @media (min-width: 600px) {
     .card-grid {
@@ -258,12 +325,18 @@
     }
   }
 
-  .hero__img {
+   .hero__img {
     width: 100vw;
     height: 80vh;
     object-fit: cover;
     object-position: center;
   }
+
+  @media (max-width: 480px) {
+  .hero__img {
+    height: 500px;
+  }
+}
 
   .logo_svg {
     display: block;
@@ -627,8 +700,19 @@
   }
 
   .hero__content {
-    top: 45%;
+    width: 80%;
+    max-width: 280px;    
+    margin-top: 8rem;
   }
+
+  @media (max-width: 600px) {
+  .hero__content h1 {
+    font-size: 1.5rem;
+  }
+  .hero__content p{
+    font-size: 0.90rem;
+  }
+}
 
   .card {
     width: 100%;
@@ -642,4 +726,7 @@
     margin-bottom: 14px;
   }
   .card { padding: 1.25rem; }
+
+
 }
+
