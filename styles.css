@@ -705,13 +705,13 @@
     margin-top: 8rem;
   }
 
-  @media (max-width: 600px) {
+
   .hero__content h1 {
     font-size: 1.5rem;
   }
   .hero__content p{
     font-size: 0.90rem;
-  }
+
 }
 
   .card {
@@ -730,3 +730,47 @@
 
 }
 
+@media (max-width: 320){
+
+  .hero__content {
+    width: 60%;
+    max-width: 280px;    
+    margin-top: 10rem;
+  }
+
+
+  .hero__content h1 {
+    font-size: 1.1rem;
+  }
+  .hero__content p{
+    font-size: 0.80rem;
+
+}
+
+.nav__links a {
+font-size: 1rem;
+line-height: 1.1;
+padding: 0.5rem 0.75rem;
+}
+ 
+.nav__links {
+min-width: 160px;
+}
+.logo {
+font-size: 1rem;
+}
+ 
+.logo_svg {
+width: 40px;
+}
+
+}
+
+
+@media (max-width: 300px) {
+  .nav__links a {
+    font-size: 0.95rem;
+    line-height: 1.1;
+    padding: 0.4rem 0.75rem;
+  }
+}
