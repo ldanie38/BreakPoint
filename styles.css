@@ -355,7 +355,8 @@
   }
 
   .button:hover {
-    background: var(--color-accent);
+    color: var(--color-accent);
+    background: var(--under-line);
     transform: translateY(-2px);
   }
 
@@ -773,4 +774,36 @@ width: 40px;
     line-height: 1.1;
     padding: 0.4rem 0.75rem;
   }
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #d62828;
+  color: white;
+
+  border-radius: 60%;
+  text-decoration: none;
+  font-size: 1.5rem;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,.2);
+
+  z-index: 999;
+}
+
+.scroll-top:hover {
+  background: #053c5e;
+}
+
+html {
+scroll-behavior: smooth;
 }
