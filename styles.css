@@ -56,26 +56,25 @@
     backdrop-filter: blur(6px);
     line-height: 1.5;
   }
+
   .site-title {
-  font-family: var(--font-heading);
-  font-size: 2rem;
-  color: var(--color-accent);
-}
-.site-title:hover {
-  color: var(--nav-a-color);
-}
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--color-accent);
+  }
 
-.logo:hover {
-  color: var(--under-line);
-}
-  
+  .site-title:hover {
+    color: var(--nav-a-color);
+  }
 
-
-
+  .logo:hover {
+    color: var(--under-line);
+  }
 
   nav h1 {
     color: var(--color-accent);
   }
+
   nav h1:hover {
     color: var(--color-surface);
   }
@@ -125,67 +124,61 @@
   }
 
   .nav__links {
-  list-style: none;   
-  margin: 0;
-  padding: 0;
-  display: flex;        
-  gap: var(--space-2);  
-}
-
-.nav__links a {
-  color: #ffffff;
-  text-decoration: none;
-  font-family: var(--font-heading);
-  font-size: var(--font-nav-a);
-  position: relative;
-}
-
-.nav__links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -3px;
-  width: 100%;
-  height: 2px;
-  background: var(--under-line);;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform .25s ease;
-}
-
-.nav__links a:hover::after {
-  transform: scaleX(1);
-}
-
-
-
-
-@media (max-width: 400px) {
-  .nav__links {
-    flex-direction: column;
-    gap: 0.25rem;
+    list-style: none;   
+    margin: 0;
+    padding: 0;
+    display: flex;        
+    gap: var(--space-2);  
   }
 
-  .nav h1 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .nav__links {
-    flex-direction: column;
-    gap: 0.5rem;
+  .nav__links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-size: var(--font-nav-a);
+    position: relative;
   }
 
-  .nav {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
+  .nav__links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background: var(--under-line);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .25s ease;
   }
-}
 
+  .nav__links a:hover::after {
+    transform: scaleX(1);
+  }
 
+  @media (max-width: 400px) {
+    .nav__links {
+      flex-direction: column;
+      gap: 0.25rem;
+    }
 
+    .nav h1 {
+      font-size: 1.4rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .nav__links {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .nav {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem;
+    }
+  }
 
   .nav a:first-child {
     margin-right: auto;
@@ -265,11 +258,6 @@
     }
   }
 
-  @media (max-width: 450px){
-
-    }
-  }
-
   .hero__img {
     width: 100vw;
     height: 80vh;
@@ -278,11 +266,10 @@
   }
 
   .logo_svg {
-  display: block;
-  width: clamp(50px, 7vw, 80px); 
-  height: auto;
-}
-
+    display: block;
+    width: clamp(50px, 7vw, 80px); 
+    height: auto;
+  }
 
   .button {
     display: inline-block;
@@ -306,8 +293,7 @@
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
 
-
-/*--- newsletter---*/
+  /*--- newsletter---*/
   .newsletter {
     display: flex;
     flex-direction: column;
@@ -361,10 +347,6 @@
     font-weight: 700;
     cursor: pointer;
   }
-
-
-
-
 }
 
 /* ============
@@ -451,7 +433,6 @@
    RESPONSIVE YOUTUBE VIDEO
    ======== */
 
-
 .surf-video-section {
   padding: var(--space-4);
   text-align: center;
@@ -481,7 +462,6 @@
   border-radius: var(--radius-card);
   box-shadow: 0 2px 6px rgba(0,0,0,0.25);
 }
-
 
 /* Keeps iframe centered  */
 .video-wrapper iframe {
@@ -525,3 +505,118 @@
     padding: var(--space-1);
   }
 }
+
+/* ============================
+   MOBILE HAMBURGER MENU
+   ============================ */
+
+.nav-toggle {
+  position: absolute;
+  left: -9999px; /* accessible but hidden */
+}
+
+.nav-toggle-label {
+  display: none;
+  cursor: pointer;
+  padding: var(--space-1);
+  margin-left: auto;
+}
+
+.nav-toggle-icon,
+.nav-toggle-icon::before,
+.nav-toggle-icon::after {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: var(--nav-a-color);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-toggle-icon::before {
+  transform: translateY(-8px);
+}
+
+.nav-toggle-icon::after {
+  transform: translateY(8px);
+}
+
+/* Show hamburger on mobile */
+@media (max-width: 600px) {
+  .nav-toggle-label {
+    display: inline-grid;
+    place-items: center;
+  }
+
+  .nav__links {
+    display: none;
+    flex-direction: column;
+    gap: var(--space-1);
+    width: 100%;
+    padding-top: var(--space-2);
+  }
+
+  .nav-toggle:checked + .nav-toggle-label + .nav__links {
+    display: flex;
+  }
+
+  /* Animate hamburger into X */
+  .nav-toggle:checked + .nav-toggle-label .nav-toggle-icon {
+    background: transparent;
+  }
+
+  .nav-toggle:checked + .nav-toggle-label .nav-toggle-icon::before {
+    transform: rotate(45deg);
+  }
+
+  .nav-toggle:checked + .nav-toggle-label .nav-toggle-icon::after {
+    transform: rotate(-45deg);
+  }
+}
+
+/* mobile nav alignment */
+/* mobile nav alignment */
+@media (max-width: 600px) {
+  .nav {
+    flex-direction: row;              /* keep logo + hamburger side by side */
+    justify-content: space-between;   /* logo left, hamburger right */
+    align-items: center;              /* vertical center */
+    flex-wrap: nowrap;
+    position: relative;
+  }
+
+  .nav__brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+  }
+
+  .nav-toggle-label {
+    display: inline-grid;
+    place-items: center;
+    margin-left: auto;           
+    cursor: pointer;
+    z-index: 200;                    
+  }
+
+  .nav__links {
+    position: absolute;
+    top: 100%;                       
+    right: 0;                      
+    background: rgba(41, 50, 65, 0.95);
+    padding: var(--space-2);
+    border-radius: 0 0 var(--radius-card) var(--radius-card);
+    display: none;
+    flex-direction: column;
+    gap: var(--space-1);
+    width: auto;
+    min-width: 180px;
+  }
+
+  .nav-toggle:checked + .nav-toggle-label + .nav__links {
+    display: flex;                
+  }
+}
+
+
