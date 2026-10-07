@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Discover the world's best surf spots with BreakPoint. Real-time forecasts, expert guides, and the ultimate wave finder for every surfer." />
-
+ <meta
+  name="description"
+  content="Discover the world's best surf spots with BreakPoint. Real-time forecasts, expert guides, and the ultimate wave finder for every surfer."
+>
   <!-- Open Graph -->
   <meta property="og:title" content="BreakPoint — Find Your Perfect Wave">
   <meta property="og:description" content="Discover the world's best surf spots with BreakPoint. Real-time forecasts, expert guides, and the ultimate wave finder for every surfer.">
@@ -84,33 +86,53 @@
       <!-- ==============
        INTRO SECTION
        ============================ -->
-  <section  class="intro">
-    <h2>Today's Featured Spots</h2>
-    <p>Explore surf conditions at popular beginner beaches.</p>
-  </section>
+<section class="featured-spots" aria-labelledby="featured-spots-title"> 
 
-  <!-- ============================
-       CARD GRID
-       ============================ -->
-  <section class="card-grid">
-    <article class="card">
-      <h3>Ditch Plains</h3>
-      <p>Fun waves and wide sandy shoreline.</p>
-      <a class="button" href="#">Learn More</a>
-    </article>
+  <div class="intro"> 
 
-    <article class="card">
-      <h3>Lido Beach</h3>
-      <p>Calm conditions perfect for new surfers.</p>
-      <a class="button" href="#">Learn More</a>
-    </article>
+    <h2 id="featured-spots-title">Today's Featured Spots</h2> 
 
-    <article class="card">
-      <h3>Rockaway Beach</h3>
-      <p>Consistent breaks and friendly surf community.</p>
-      <a class="button" href="#">Learn More</a>
-    </article>
-  </section>
+    <p>Explore surf conditions at popular beginner beaches.</p> 
+
+  </div> 
+
+  <div class="card-grid"> 
+
+    <article class="card"> 
+
+      <h3>Ditch Plains</h3> 
+
+      <p>Fun waves and wide sandy shoreline.</p> 
+
+      <a class="button" href="#">Learn More</a> 
+
+    </article> 
+
+    <article class="card"> 
+
+      <h3>Lido Beach</h3> 
+
+      <p>Calm conditions perfect for new surfers.</p> 
+
+      <a class="button" href="#">Learn More</a> 
+
+    </article> 
+
+    <article class="card"> 
+
+      <h3>Rockaway Beach</h3> 
+
+      <p>Consistent breaks and friendly surf community.</p> 
+
+      <a class="button" href="#">Learn More</a> 
+
+    </article> 
+
+  </div> 
+
+</section> 
+
+  
 
   <!-- ============================
        SURF VIDEO SECTION
@@ -151,12 +173,12 @@
     <form class="newsletter-form" aria-describedby="newsletter-desc">
       <div class="field">
         <label for="newsletter-name">Name *</label>
-        <input id="newsletter-name" name="newsletter-name" type="text" autocomplete="name" required aria-required="true">
+        <input id="newsletter-name" name="newsletter-name" type="text" autocomplete="name" required > 
       </div>
 
       <div class="field">
         <label for="newsletter-email">Email *</label>
-        <input id="newsletter-email" name="newsletter-email" type="email" autocomplete="email" required aria-required="true">
+        <input id="newsletter-email" name="newsletter-email" type="email" autocomplete="email" required >
       </div>
 
       <button type="submit" class="button">Subscribe</button>
