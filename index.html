@@ -49,11 +49,10 @@
 
 
     <ul class="nav__links">
-      <li><a href="#">Destinations</a></li>
-      <li><a href="#">Spot Comparison</a></li>
-      <li><a href="#">Forecast</a></li>
-      <li><a href="#">Glossary</a></li>
-      <li><a href="#">Contact Us</a></li>
+      <li><a href="#destinations">Destinations</a></li>
+      <li><a href="#spots">Spot Comparison</a></li>
+      <li><a href="#forcast"forecast>Forecast</a></li>
+      <li><a href="#contact">Contact Us</a></li>
     </ul>
   </nav>
 
@@ -75,7 +74,7 @@
       Beginner-friendly forecasts and safety tips
     </p>
 
-    <a class="button" href="#">
+    <a class="button" href="#forecast" >
       View Forecast
     </a>
   </div>
@@ -87,7 +86,7 @@
       <!-- ==============
        INTRO SECTION
        ============================ -->
-<section class="featured-spots" aria-labelledby="featured-spots-title"> 
+<section class="featured-spots" id="destinations" aria-labelledby="featured-spots-title"> 
 
   <div class="intro"> 
 
@@ -138,7 +137,7 @@
   <!-- ============================
        SURF VIDEO SECTION
        ============================ -->
-  <section class="surf-video-section">
+  <section class="surf-video-section" id ="spots">
     <h2>7 Tips Beginners Need to Know to Start Surfing</h2>
 
     <div class="video-wrapper">
@@ -159,15 +158,61 @@
     </div>
 
     <div class="transcript">
-      <h3>Transcript</h3>
+      <h3>Video Transcript</h3>
       <p>Transcript will be added here for accessibility and screen‑reader users.</p>
     </div>
   </section>
 
+
+  <!-- ============================
+      Forecast
+       ============================ -->
+
+
+<section id="forecast" class="forecast-section">
+  <h2>Surf Forecast</h2>
+
+  <div class="forecast-grid">
+
+    <article class="forecast-card">
+      <h3>Long Beach</h3>
+      <p>Small waves and light winds create beginner-friendly conditions.</p>
+      <ul>
+        <li><strong>Wave Height:</strong> 2-3 ft</li>
+        <li><strong>Wind:</strong> 5-10 mph</li>
+        <li><strong>Condition:</strong> Fair</li>
+      </ul>
+    </article>
+
+    <article class="forecast-card">
+      <h3>Ditch Plains</h3>
+      <p>Consistent swell and clean surf with moderate wave energy.</p>
+      <ul>
+        <li><strong>Wave Height:</strong> 3-4 ft</li>
+        <li><strong>Wind:</strong> 8-12 mph</li>
+        <li><strong>Condition:</strong> Good</li>
+      </ul>
+    </article>
+
+    <article class="forecast-card">
+      <h3>Lido Beach</h3>
+      <p>Gentle surf and calm conditions ideal for new surfers.</p>
+      <ul>
+        <li><strong>Wave Height:</strong> 1-2 ft</li>
+        <li><strong>Wind:</strong> 4-8 mph</li>
+        <li><strong>Condition:</strong> Excellent</li>
+      </ul>
+    </article>
+
+  </div>
+</section>
+
+
+
   <!-- ============================
        NEWSLETTER
        ============================ -->
-  <section class="newsletter">
+  <section class="newsletter" id="contact">
     <h2>Join Our Surf Newsletter</h2>
     <p>Get beginner-friendly surf forecasts, safety tips, and spot updates</p>
 
