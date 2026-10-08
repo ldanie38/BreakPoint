@@ -112,7 +112,43 @@ AI Disclosure
 
 I used AI assistance to help refine parts of my CSS architecture, especially around container queries, intrinsic grid sizing, and organizing my documentation. AI also helped me debug my navigation  
 
-I verified all layout behavior myself in Chrome and Firefox at narrow, medium, wide, and 200% zoom. I tested keyboard focus, reduced‑motion behavior, and fallback behavior without container queries. I adjusted spacing, breakpoints, and component behavior based on real browser testing. All final decisions, code changes, and testing were done by me. 
 
 
 
+
+
+
+
+BreakPoint Capstone Project
+Created by: Lua Daniele
+
+Project Description:
+BreakPoint is a responsive, single-page surf information website
+designed for beginner surfers.
+
+Website Files:
+- index.html
+- styles.css
+- assets folder
+
+Published Website:
+https://ldanie38.github.io/BreakPoint/
+
+Features:
+- Responsive single-page layout
+- Sticky navigation
+- Mobile hamburger menu
+- Hero section
+- Featured surf locations
+- Responsive YouTube video
+- Surf forecast cards
+- Accessible newsletter form
+- Smooth scrolling
+- Open Graph and Twitter metadata
+
+Testing Completed:
+- HTML validation
+- CSS validation
+- Lighthouse test
+- Mobile testing
+- Cross-browser testing
