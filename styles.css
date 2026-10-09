@@ -874,3 +874,7 @@ scroll-behavior: smooth;
     grid-template-columns: 1fr;
   }
 }
+
+.hero__content p {
+    margin-bottom: 2rem;
+}
