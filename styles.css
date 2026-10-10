@@ -875,3 +875,9 @@ scroll-behavior: smooth;
   }
 }
 
+
+@media (max-width: 320px) {
+  .hero__content {
+    top: 40%;
+  }
+}
